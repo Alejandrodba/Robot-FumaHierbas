@@ -31,17 +31,15 @@ def posicion(market, memory, interval, cpt):
         if cash > 0:
             cash -= cpt
             crypto_cash += cpt/trade_price
-            acc_balance = cash + crypto_cash*trade_price
     
     elif order == -1:
         if crypto_cash > 0:
             cash += cpt
             crypto_cash -= cpt/trade_price
-            acc_balance = cash + crypto_cash*trade_price
-    
-    elif order == 0:
         
-        acc_balance = cash + crypto_cash*trade_price
+        
+    acc_balance = cash + crypto_cash*trade_price
+    
     print(f'trade_price: {trade_price}')
     print(f'cash: {cash}')
     print(f'crypto_cash: {crypto_cash}')   
